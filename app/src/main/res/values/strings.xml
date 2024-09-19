@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">O2scratch</string>
+    <string name="o2_api_url">"https://api.o2.sk"</string>
+    <string name="activation_error">"Failed to activate code"</string>
+    <string name="reveal_code">Reveal code</string>
+    <string name="activate_code">Activate code</string>
+    <string name="reset">reset</string>
+</resources>
