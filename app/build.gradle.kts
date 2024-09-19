@@ -43,6 +43,11 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+    testOptions {
+        unitTests{
+            isReturnDefaultValues = true
+        }
+    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -69,7 +74,13 @@ dependencies {
     implementation(libs.squareup.okhttp3.logging)
     implementation(libs.squareup.okhttp3)
     implementation(libs.androidx.lifecycle.runtime.compose.android)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.8.0")
+    testImplementation("app.cash.turbine:turbine:1.1.0")
     testImplementation(libs.junit)
+    testImplementation("io.mockk:mockk:1.13.11")
+    testImplementation("io.mockk:mockk-android:1.13.11")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
